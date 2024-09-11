@@ -29,21 +29,43 @@ export default function Home() {
             branding and even dabbling in 3D work. It&apos;s a mix, but I love
             it all!
           </p>
-          <div className="flex justify-between items-center w-full">
+          <div className="flex justify-center sm:justify-between items-center w-full">
             <a href="https://www.linkedin.com/in/ruben-spaan-b266481bb/">
-              <button className="flex gap-1 items-center justify-start px-4 py-2 rounded-lg bg-white text-[#222323] font-sans font-semibold tracking-tighter hover:bg-white/50 transition-all duration-300 ease-in-out">
+              <button className=" gap-1 items-center justify-start px-4 py-2 rounded-lg bg-white text-[#222323] font-sans font-semibold tracking-tighter hover:bg-white/50 transition-all duration-300 ease-in-out hidden sm:flex">
                 <AiOutlineMessage className="h-6 w-6" /> Contact me
               </button>
             </a>
-            <div className="flex gap-1">
+            <div className="flex gap-3">
               <a href="https://www.linkedin.com/in/ruben-spaan-b266481bb/">
-                <FaLinkedin className="h-8 w-8 hover:scale-110 transition-all duration-100 ease-in hover:cursor-pointer" />
+                <div className="rounded-full bg-[#f7f9f9] w-10 h-10 flex items-center justify-center">
+                  <Image
+                    src={"./icons/linkedin.svg"}
+                    alt="Go to my Linkedin"
+                    width={20}
+                    height={20}
+                  />
+                </div>
               </a>
               <a href="https://dribbble.com/Ruben-Spaan">
-                <FaSquareDribbble className="h-8 w-8 hover:scale-110 transition-all duration-100 ease-in hover:cursor-pointer" />
+                <div className="rounded-full bg-[#f7f9f9] w-10 h-10 flex items-center justify-center">
+                  <Image
+                    src={"./icons/dribbble.svg"}
+                    alt="Go to my Dribbble"
+                    width={24}
+                    height={24}
+                  />
+                </div>
               </a>
               <a href="https://github.com/Ruben-Spn">
-                <FaSquareGithub className="h-8 w-8 hover:scale-110 transition-all duration-100 ease-in hover:cursor-pointer" />
+                <div className="rounded-full bg-[#f7f9f9] w-10 h-10 flex items-center justify-center">
+                  <Image
+                    src={"./icons/github.svg"}
+                    alt="Go to my Github"
+                    width={24}
+                    height={24}
+                    className="absolute"
+                  />
+                </div>
               </a>
             </div>
           </div>
