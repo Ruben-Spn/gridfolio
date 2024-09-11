@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Dmsans.variable} antialiased flex items-center justify-center min-h-screen w-screen text-[#f7f9f9]`}
+        className={`${Dmsans.variable} antialiased flex items-center justify-center min-h-screen w-screen text-[#f7f9f9] scroll-smooth`}
       >
         {children}
       </body>

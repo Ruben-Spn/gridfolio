@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { FaLinkedin, FaSquareDribbble, FaSquareGithub } from "react-icons/fa6";
 import { AiOutlineMessage, AiFillMessage } from "react-icons/ai";
+import ProjectWidgetSmall from "./components/pwSmall";
+import ProjectWidgetRegular from "./components/pwRegular";
+import ProjectWidgetLarge from "./components/pwLarge";
 export default function Home() {
   return (
     <div className="w-full flex flex-col items-center justify-center py-16">
@@ -13,24 +18,23 @@ export default function Home() {
           className="-ml-3"
         />
 
-        <div className="pt-8 flex flex-col items-start justify-center gap-3 ">
+        <div className="pt-8 flex flex-col items-start justify-center gap-8 ">
           <p className="font-sans font-[200] text-[1.2rem] leading-relaxed tracking-wide max-w-[550px] min-w-300px">
             Hi, I am a passionate UI/UX Designer with a background in front-end
             development, specializing in creating user-centered products. With a
             strong foundation in both design and development, I bring a unique
             perspective to building intuitive and innovative products. <br />{" "}
-            <br /> I'm passionate about so many things—web design and
+            <br /> I&apos;m passionate about so many things—web design and
             development, product design, UX research, illustration/logo design,
-            branding and even dabbling in 3D work. It's a mix, but I love it
-            all!
+            branding and even dabbling in 3D work. It&apos;s a mix, but I love
+            it all!
           </p>
           <div className="flex justify-between items-center w-full">
             <a href="https://www.linkedin.com/in/ruben-spaan-b266481bb/">
-              <button className="flex gap-2 items-center justify-start px-4 py-2 rounded-lg bg-white text-[#222323] font-sans font-semibold tracking-tighter hover:bg-white/50 transition-all duration-300 ease-in-out">
-                <AiOutlineMessage className="h-6 w-6" /> Message on Linkedin
+              <button className="flex gap-1 items-center justify-start px-4 py-2 rounded-lg bg-white text-[#222323] font-sans font-semibold tracking-tighter hover:bg-white/50 transition-all duration-300 ease-in-out">
+                <AiOutlineMessage className="h-6 w-6" /> Contact me
               </button>
             </a>
-
             <div className="flex gap-1">
               <a href="https://www.linkedin.com/in/ruben-spaan-b266481bb/">
                 <FaLinkedin className="h-8 w-8 hover:scale-110 transition-all duration-100 ease-in hover:cursor-pointer" />
@@ -52,20 +56,20 @@ export default function Home() {
       <section className="lg:w-2/4 w-4/5  gap-3 flex flex-col pt-8 max-w-[1250px]">
         <h1 className="font-sans font-medium">My work</h1>
         <div className="flex flex-col md:flex-row w-full items-center justify-center gap-3">
-          <article className="bg-white h-[300px] w-full rounded-[36px]"></article>
-          <article className="bg-white h-[300px] w-full rounded-[36px]"></article>
+          <ProjectWidgetRegular image="placeholder-5.jpg" />
+          <ProjectWidgetRegular image="placeholder-6.jpg" />
         </div>
         <div className="flex flex-col md:flex-row w-full gap-3">
-          <article className="bg-white h-[600px] w-full rounded-[36px]"></article>
+          <ProjectWidgetLarge image="placeholder-1.jpg" />
           <div className="flex flex-col gap-3 w-full">
-            <article className="bg-white h-[300px] md:h-full w-full rounded-[36px]"></article>
-            <article className="bg-white h-[300px] md:h-full w-full rounded-[36px]"></article>
+            <ProjectWidgetSmall image="placeholder-7.jpg" />
+            <ProjectWidgetSmall image="placeholder-8.jpg" />
           </div>
-          <article className="bg-white h-[600px] w-full rounded-[36px]"></article>
+          <ProjectWidgetLarge image="placeholder-2.jpg" />
         </div>
         <div className="flex flex-col md:flex-row w-full gap-3">
-          <article className="bg-white h-[300px] w-full rounded-[36px]"></article>
-          <article className="bg-white h-[300px] w-full rounded-[36px]"></article>
+          <ProjectWidgetRegular image="placeholder-9.jpg" />
+          <ProjectWidgetRegular image="placeholder-1.jpg" />
         </div>
       </section>
     </div>
