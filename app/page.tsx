@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { FaLinkedin, FaSquareDribbble, FaSquareGithub } from "react-icons/fa6";
-import { AiOutlineMessage, AiFillMessage } from "react-icons/ai";
+import { AiOutlineMessage } from "react-icons/ai";
 import ProjectWidgetSmall from "./components/pwSmall";
 import ProjectWidgetRegular from "./components/pwRegular";
 import ProjectWidgetLarge from "./components/pwLarge";
