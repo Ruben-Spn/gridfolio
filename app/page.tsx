@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { FaLinkedin, FaSquareDribbble, FaSquareGithub } from "react-icons/fa6";
 import { AiOutlineMessage } from "react-icons/ai";
 import ProjectWidgetSmall from "./components/pwSmall";
 import ProjectWidgetRegular from "./components/pwRegular";
