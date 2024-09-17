@@ -21,6 +21,8 @@ export default function ProjectWidgetLarge(props: ProjectWidgetProps) {
         src={`/${props.image}`}
         alt="Description of image"
         layout="fill"
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,L5C~ecD*D*xY_L-;IVn$02.7%gM|"
         objectFit="cover"
         className={`transform transition-all ease-in-out duration-1000 w-full h-full ${
           isHovering ? "scale-105" : "scale-100"

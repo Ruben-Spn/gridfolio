@@ -9,14 +9,15 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col items-center justify-center py-16">
       <section className="lg:w-2/3 w-4/5 flex flex-col items-center justify-center gap-3">
-        <Image
-          src={"./personal_logo_white.svg"}
-          alt="Picture of the author"
-          width={75}
-          height={75}
-          className="-ml-3"
-        />
-
+        <a href="/">
+          <Image
+            src={"./personal_logo_white.svg"}
+            alt="Picture of the author"
+            width={75}
+            height={75}
+            className="-ml-3"
+          />
+        </a>
         <div className="pt-8 flex flex-col items-start justify-center gap-8 ">
           <p className="font-sans font-[200] text-[1.2rem] leading-relaxed tracking-wide max-w-[550px] min-w-300px">
             Hi, I am a passionate UI/UX Designer with a background in front-end
@@ -36,7 +37,7 @@ export default function Home() {
             </a>
             <div className="flex gap-3">
               <a href="https://www.linkedin.com/in/ruben-spaan-b266481bb/">
-                <div className="rounded-full bg-[#f7f9f9] w-10 h-10 flex items-center justify-center">
+                <div className="rounded-full bg-[#f7f9f9] w-10 h-10 flex items-center justify-center hover:bg-white/50 transition-all duration-300 ease-in-out">
                   <Image
                     src={"./icons/linkedin.svg"}
                     alt="Go to my Linkedin"
@@ -46,7 +47,7 @@ export default function Home() {
                 </div>
               </a>
               <a href="https://dribbble.com/Ruben-Spaan">
-                <div className="rounded-full bg-[#f7f9f9] w-10 h-10 flex items-center justify-center">
+                <div className="rounded-full bg-[#f7f9f9] w-10 h-10 flex items-center justify-center hover:bg-white/50 transition-all duration-300 ease-in-out">
                   <Image
                     src={"./icons/dribbble.svg"}
                     alt="Go to my Dribbble"
@@ -56,7 +57,7 @@ export default function Home() {
                 </div>
               </a>
               <a href="https://github.com/Ruben-Spn">
-                <div className="rounded-full bg-[#f7f9f9] w-10 h-10 flex items-center justify-center">
+                <div className="rounded-full bg-[#f7f9f9] w-10 h-10 flex items-center justify-center hover:bg-white/50 transition-all duration-300 ease-in-out">
                   <Image
                     src={"./icons/github.svg"}
                     alt="Go to my Github"
@@ -77,7 +78,11 @@ export default function Home() {
       <section className="lg:w-2/4 w-4/5  gap-3 flex flex-col pt-8 max-w-[1250px]">
         <h1 className="font-sans font-medium">My work</h1>
         <div className="flex flex-col md:flex-row w-full items-center justify-center gap-3">
-          <ProjectWidgetRegular image="placeholder-5.jpg" />
+          <ProjectWidgetRegular
+            image="ahoy/ahoy.png"
+            tags={["Design system", "UI Library", "UI/UX"]}
+            link="/projects/Ahoy"
+          />
           <ProjectWidgetRegular image="placeholder-6.jpg" />
         </div>
         <div className="flex flex-col md:flex-row w-full gap-3">
