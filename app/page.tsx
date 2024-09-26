@@ -5,6 +5,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 import ProjectWidgetSmall from "./components/pwSmall";
 import ProjectWidgetRegular from "./components/pwRegular";
 import ProjectWidgetLarge from "./components/pwLarge";
+
 export default function Home() {
   return (
     <div className="w-full flex flex-col items-center justify-center py-16">
@@ -69,13 +70,9 @@ export default function Home() {
               </a>
             </div>
           </div>
-
-          {/* the place where everyone pretends they 'live
-              for challenges' but secretly just want to survive their next Zoom
-              meeting. */}
         </div>
       </section>
-      <section className="lg:w-2/4 w-4/5  gap-3 flex flex-col pt-8 max-w-[1250px]">
+      <section className="w-4/5  lg:w-[1012px]   gap-3 flex flex-col pt-8 max-w-[1250px]">
         <h1 className="font-sans font-medium">My work</h1>
         <div className="flex flex-col md:flex-row w-full items-center justify-center gap-3">
           <ProjectWidgetRegular
@@ -83,15 +80,28 @@ export default function Home() {
             tags={["Design system", "UI Library", "UI/UX"]}
             link="/projects/Ahoy"
           />
-          <ProjectWidgetRegular image="placeholder-6.jpg" />
+          <ProjectWidgetRegular
+            image="everloop/everloop.svg"
+            tags={["Web agency", "Software engineering", "SaaS"]}
+            link="/projects/Everloop"
+            dark={true}
+          />
         </div>
-        <div className="flex flex-col md:flex-row w-full gap-3">
-          <ProjectWidgetLarge image="placeholder-1.jpg" />
+        <div className="flex flex-col md:flex-row w-full gap-3 justify-evenly">
+          <ProjectWidgetLarge image="muse/muse.svg" link="/projects/Muse" />
           <div className="flex flex-col gap-3 w-full">
-            <ProjectWidgetSmall image="placeholder-7.jpg" />
+            <ProjectWidgetSmall
+              image="muse/muse.svg"
+              link="/projects/Muse"
+              tags={["Portfolio", "Construction"]}
+            />
             <ProjectWidgetSmall image="placeholder-8.jpg" />
           </div>
-          <ProjectWidgetLarge image="placeholder-2.jpg" />
+          <ProjectWidgetLarge
+            image="blueprint/blueprint.svg"
+            link="/projects/Blueprint"
+            tags={["Web design", "Figma", "Agency"]}
+          />
         </div>
         <div className="flex flex-col md:flex-row w-full gap-3">
           <ProjectWidgetRegular image="placeholder-9.jpg" />
