@@ -10,7 +10,6 @@ import { notFound } from "next/navigation";
 import Header from "@/app/components/Header";
 import { urlFor } from "@/sanity/imageBuilder";
 import RichContentBlock from "@/app/components/RichContentBlock";
-import { PortableTextComponents } from "@portabletext/react";
 
 interface ProjectPageProps {
   params: { slug: string };

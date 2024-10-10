@@ -4,11 +4,7 @@ import ProjectWidgetSmall from "./components/pwSmall";
 import ProjectWidgetRegular from "./components/pwRegular";
 import ProjectWidgetLarge from "./components/pwLarge";
 import { Project } from "@/sanity/types/Projects";
-import {
-  getCovers,
-  getProjectCovers,
-  getProjectsCompact,
-} from "@/sanity/sanity-utils";
+import { getProjectCovers } from "@/sanity/sanity-utils";
 
 export default async function Home() {
   const projects: Project[] = await getProjectCovers();
