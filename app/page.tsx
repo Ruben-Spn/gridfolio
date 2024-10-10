@@ -1,12 +1,31 @@
-"use client";
-
 import Image from "next/image";
 import { AiOutlineMessage } from "react-icons/ai";
 import ProjectWidgetSmall from "./components/pwSmall";
 import ProjectWidgetRegular from "./components/pwRegular";
 import ProjectWidgetLarge from "./components/pwLarge";
+import { Project } from "@/sanity/types/Projects";
+import {
+  getCovers,
+  getProjectCovers,
+  getProjectsCompact,
+} from "@/sanity/sanity-utils";
 
-export default function Home() {
+export default async function Home() {
+  const projects: Project[] = await getProjectCovers();
+  const getProjectBySlug = (slug: string) => {
+    return projects.find((e) => e.slug === slug);
+  };
+
+  const ahoy = getProjectBySlug("ahoy");
+  const everloop = getProjectBySlug("everloop");
+  const M = getProjectBySlug("m");
+  const teamleader = getProjectBySlug("teamleader");
+  const teamleaderIntegrations = getProjectBySlug("teamleader-integrations");
+  const calandra = getProjectBySlug("calandra");
+  const blueprint = getProjectBySlug("blueprint");
+
+  console.log(blueprint);
+
   return (
     <div className="w-full flex flex-col items-center justify-center py-16">
       <section className="lg:w-2/3 w-4/5 flex flex-col items-center justify-center gap-3">
@@ -76,36 +95,49 @@ export default function Home() {
         <h1 className="font-sans font-medium">My work</h1>
         <div className="flex flex-col md:flex-row w-full items-center justify-center gap-3">
           <ProjectWidgetRegular
-            image="ahoy/ahoy.png"
-            tags={["Design system", "UI Library", "UI/UX"]}
-            link="/projects/Ahoy"
+            image={ahoy?.coverImageUrl}
+            tags={ahoy?.tags}
+            slug={ahoy?.slug}
           />
           <ProjectWidgetRegular
-            image="everloop/everloop.svg"
-            tags={["Web agency", "Software engineering", "SaaS"]}
-            link="/projects/Everloop"
+            image={everloop?.coverImageUrl}
+            tags={everloop?.tags}
+            slug={everloop?.slug}
             dark={true}
           />
         </div>
-        <div className="flex flex-col md:flex-row w-full gap-3 justify-evenly">
-          <ProjectWidgetLarge image="muse/muse.svg" link="/projects/Muse" />
+        <div className="flex flex-col md:flex-row w-full gap-3 justify-evenly ">
+          <ProjectWidgetLarge
+            image={calandra?.coverImageUrl}
+            tags={calandra?.tags}
+            slug={calandra?.slug}
+          />
           <div className="flex flex-col gap-3 w-full">
             <ProjectWidgetSmall
-              image="muse/muse.svg"
-              link="/projects/Muse"
-              tags={["Portfolio", "Construction"]}
+              image={M?.coverImageUrl}
+              tags={M?.tags}
+              slug={M?.slug}
+              dark={true}
             />
-            <ProjectWidgetSmall image="placeholder-8.jpg" />
+            <ProjectWidgetSmall
+              image={teamleaderIntegrations?.coverImageUrl}
+              tags={teamleaderIntegrations?.tags}
+              slug={teamleaderIntegrations?.slug}
+            />
           </div>
           <ProjectWidgetLarge
-            image="blueprint/blueprint.svg"
-            link="/projects/Blueprint"
-            tags={["Web design", "Figma", "Agency"]}
+            image={blueprint?.coverImageUrl}
+            tags={blueprint?.tags}
+            slug={blueprint?.slug}
           />
         </div>
         <div className="flex flex-col md:flex-row w-full gap-3">
-          <ProjectWidgetRegular image="placeholder-9.jpg" />
-          <ProjectWidgetRegular image="placeholder-1.jpg" />
+          <ProjectWidgetRegular
+            image={teamleader?.coverImageUrl}
+            tags={teamleader?.tags}
+            slug={teamleader?.slug}
+          />
+          {/* <ProjectWidgetRegular image="" /> */}
         </div>
       </section>
     </div>
